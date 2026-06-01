@@ -18,4 +18,16 @@ module.exports = {
   },
   testMatch: ['<rootDir>/src/__tests__/**/*.{test,spec}.{ts,tsx}'],
   testPathIgnorePatterns: ['/node_modules/'],
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: [
+    'text',
+    'lcov',
+    'html'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.test.{ts,tsx}',
+    '!src/__tests__/**'
+  ]
 }
