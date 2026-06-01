@@ -2,7 +2,7 @@ import { recordPanDetails, analyzeDocument } from '../services/api'
 import type { PanFormData } from '../types'
 
 const mockFetch = jest.fn()
-global.fetch = mockFetch
+globalThis.fetch = mockFetch as any
 
 const sampleFormData: PanFormData = {
   fullName: 'John Doe',
